@@ -11,8 +11,8 @@ function App() {
       <div style={{ width: '100vw', height: '100vh', position: 'fixed', top: 0, left: 0, zIndex: -1, pointerEvents: 'inherit' }}>
         <Galaxy 
           mouseRepulsion={true}
-          mouseInteraction={true}
-          density={1.5}
+          mouseInteraction={false}
+          density={2}
           glowIntensity={0.5}
           saturation={0.05}
           hueShift={0}
