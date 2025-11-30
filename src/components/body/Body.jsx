@@ -10,6 +10,8 @@ import beat3 from '../../assets/beat-3.mp4';
 import beat4 from '../../assets/beat-4.mp4';
 import onev1 from '../../assets/1v1-thumbnail.png';
 import zonewars from '../../assets/zonewars.png';
+import beat5 from '../../assets/beat-5.mp4';
+import beat6 from '../../assets/beat-6.mp4';
 
 function Body() {
   const [copyFeedback, setCopyFeedback] = useState('');
@@ -18,6 +20,7 @@ function Body() {
   const [dragStart, setDragStart] = useState(0);
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [copiedCode, setCopiedCode] = useState(null);
+  const [beatTitles, setBeatTitles] = useState(['Guitar Trap Beat', '"Poison" Trap Beat', 'Lithe Type Beat', '"Waterfall" Hood Trap', '"Bugatti" Trap Beat', 'Sampled Drill Beat']);
   const carouselRef = useRef(null);
 
   const scrollToSection = (sectionId) => {
@@ -148,32 +151,27 @@ function Body() {
     },
     {
       title: 'Monitor',
-      description: '27" 144Hz',
+      description: '27" 280Hz',
       category: 'Peripherals'
     },
     {
-      title: 'Keyboard',
-      description: 'Mechanical RGB',
-      category: 'Peripherals'
-    },
-    {
-      title: 'Mouse',
-      description: 'Gaming Mouse',
-      category: 'Peripherals'
-    },
-    {
-      title: 'Headset',
-      description: 'Gaming Audio',
-      category: 'Peripherals'
-    },
-    {
-      title: 'Mouse',
-      description: 'Logitech G Pro x Superlight',
+      title: 'Monitor 2',
+      description: '27" 165Hz',
       category: 'Peripherals'
     },
     {
       title: 'Keyboard',
       description: 'Razer Huntsman Mini V3 Pro',
+      category: 'Peripherals'
+    },
+    {
+      title: 'Mouse',
+      description: 'Logitech G Pro x Superlight 2',
+      category: 'Peripherals'
+    },
+    {
+      title: 'Headset',
+      description: 'Logitech G Pro x',
       category: 'Peripherals'
     },
     {
@@ -183,22 +181,12 @@ function Body() {
     },
     {
       title: 'Mic',
-      description: 'HyperX Quadcast S',
+      description: 'Fifine AM8',
       category: 'Peripherals'
     },
     {
-      title: 'Monitor 1',
-      description: 'Asus VG279Q 280Hz',
-      category: 'Peripherals'
-    },
-    {
-      title: 'Monitor 2',
-      description: 'Asus VG278GM 165Hz',
-      category: 'Peripherals'
-    },
-    {
-      title: 'Headset',
-      description: 'Logitech G Pro x',
+      title: 'Mixer',
+      description: 'Fifine SC3',
       category: 'Peripherals'
     }
   ];
@@ -348,7 +336,7 @@ function Body() {
                       key={index}
                       className="carousel-item"
                       style={{
-                        transform: `rotateY(${index * 17.14}deg) translateZ(600px)`
+                        transform: `rotateY(${index * 20}deg) translateZ(600px)`
                       }}
                     >
                       <ElectricBorder>
@@ -377,28 +365,95 @@ function Body() {
           </AppearAnimation>
           <AppearAnimation delay={0.2}>
             <div className="songs-content">
-              <div className="beat-video">
-                <video controls>
-                  <source src={beat1} type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
+              <div className="beat-video-wrapper">
+                <div className="beat-video">
+                  <video controls>
+                    <source src={beat1} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <input 
+                  type="text" 
+                  className="beat-title-input" 
+                  value={beatTitles[0]}
+                  readOnly
+                  placeholder="Enter beat title"
+                />
               </div>
-              <div className="beat-video">
-                <video controls>
-                  <source src={beat2} type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
+              <div className="beat-video-wrapper">
+                <div className="beat-video">
+                  <video controls>
+                    <source src={beat2} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <input 
+                  type="text" 
+                  className="beat-title-input" 
+                  value={beatTitles[1]}
+                  readOnly
+                  placeholder="Enter beat title"
+                />
               </div>
-              <div className="beat-video">
-                <video controls>
-                  <source src={beat3} type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-              </div><div className="beat-video">
-                <video controls>
-                  <source src={beat4} type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
+              <div className="beat-video-wrapper">
+                <div className="beat-video">
+                  <video controls>
+                    <source src={beat3} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <input 
+                  type="text" 
+                  className="beat-title-input" 
+                  value={beatTitles[2]}
+                  readOnly
+                  placeholder="Enter beat title"
+                />
+              </div>
+              <div className="beat-video-wrapper">
+                <div className="beat-video">
+                  <video controls>
+                    <source src={beat4} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <input 
+                  type="text" 
+                  className="beat-title-input" 
+                  value={beatTitles[3]}
+                  readOnly
+                  placeholder="Enter beat title"
+                />
+              </div>
+              <div className="beat-video-wrapper">
+                <div className="beat-video">
+                  <video controls>
+                    <source src={beat5} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <input 
+                  type="text" 
+                  className="beat-title-input" 
+                  value={beatTitles[4]}
+                  readOnly
+                  placeholder="Enter beat title"
+                />
+              </div>
+              <div className="beat-video-wrapper">
+                <div className="beat-video">
+                  <video controls>
+                    <source src={beat6} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <input 
+                  type="text" 
+                  className="beat-title-input" 
+                  value={beatTitles[5]}
+                  readOnly
+                  placeholder="Enter beat title"
+                />
               </div>
             </div>
           </AppearAnimation>
@@ -427,7 +482,7 @@ function Body() {
                   <p className="map-code-label">Map Code:</p>
                   <div className="map-code-wrapper">
                     <code onClick={() => copyToClipboard('9293-2250-1900', 'code1')}>
-                      <span>{copiedCode === 'code1' ? 'Code Copied!' : '9293-2250-1900'}</span>
+                      {copiedCode === 'code1' ? 'Code Copied!' : '9293-2250-1900'}
                       <FaPaperclip />
                     </code>
                   </div>
@@ -441,7 +496,7 @@ function Body() {
                   <p className="map-code-label">Map Code:</p>
                   <div className="map-code-wrapper">
                     <code onClick={() => copyToClipboard('8651-7530-4276', 'code2')}>
-                      <span>{copiedCode === 'code2' ? 'Code Copied!' : '8651-7530-4276'}</span>
+                      {copiedCode === 'code2' ? 'Code Copied!' : '8651-7530-4276'}
                       <FaPaperclip />
                     </code>
                   </div>
